@@ -1,0 +1,188 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InitialRegistryAddressCannotBeZeroAddress",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "OnlyOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "OperatorNotAllowed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "RegistryHasBeenRevoked",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newRegistry",
+						"type": "address"
+					}
+				],
+				"name": "OperatorFilterRegistryAddressUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "OperatorFilterRegistryRevoked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "isOperatorFilterRegistryRevoked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "operatorFilterRegistry",
+				"outputs": [
+					{
+						"internalType": "contract IOperatorFilterRegistry",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "revokeOperatorFilterRegistry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newRegistry",
+						"type": "address"
+					}
+				],
+				"name": "updateOperatorFilterRegistryAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"InitialRegistryAddressCannotBeZeroAddress()": [
+					{
+						"details": "Emitted when the initial registry address is attempted to be set to the zero address."
+					}
+				],
+				"OnlyOwner()": [
+					{
+						"details": "Emitted when someone other than the owner is trying to call an only owner function."
+					}
+				],
+				"OperatorNotAllowed(address)": [
+					{
+						"details": "Emitted when an operator is not allowed."
+					}
+				],
+				"RegistryHasBeenRevoked()": [
+					{
+						"details": "Emitted when the registry has already been revoked."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "The constructor that is called when the contract is being deployed."
+				},
+				"owner()": {
+					"details": "Assume the contract has an owner, but leave specific Ownable implementation up to inheriting contract."
+				}
+			},
+			"title": "RevokableOperatorFilterer",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"revokeOperatorFilterRegistry()": {
+					"notice": "Revoke the OperatorFilterRegistry address, permanently bypassing checks. OnlyOwner."
+				},
+				"updateOperatorFilterRegistryAddress(address)": {
+					"notice": "Update the address that the contract will make OperatorFilter checks against. When set to the zero         address, checks will be permanently bypassed, and the address cannot be updated again. OnlyOwner."
+				}
+			},
+			"notice": "This contract is meant to allow contracts to permanently skip OperatorFilterRegistry checks if desired. The         Registry itself has an \"unregister\" function, but if the contract is ownable, the owner can re-register at         any point. As implemented, this abstract contract allows the contract owner to permanently skip the         OperatorFilterRegistry checks by calling revokeOperatorFilterRegistry. Once done, the registry         address cannot be further updated.         Note that OpenSea will still disable creator earnings enforcement if filtered operators begin fulfilling orders         on-chain, eg, if the registry is revoked or bypassed.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MusubiCollection_flattened.sol": "RevokableOperatorFilterer"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MusubiCollection_flattened.sol": {
+			"keccak256": "0x83942480ef3c8fa37282f440062c80427c7aba11793a274180ec26f148d9bc75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6123a0048e823d6364f00132c0f499f4679352126e0642480a2cd9dde990482c",
+				"dweb:/ipfs/QmbX9QUDvJKhq6LHJ6r52FXXVXTpM6qZufzEXHsnwoSGgF"
+			]
+		}
+	},
+	"version": 1
+}

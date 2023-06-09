@@ -1,0 +1,198 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "level",
+						"type": "uint256"
+					}
+				],
+				"name": "CalLevelChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "transferer",
+						"type": "address"
+					}
+				],
+				"name": "LocalCalAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "transferer",
+						"type": "address"
+					}
+				],
+				"name": "LocalCalRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "transferer",
+						"type": "address"
+					}
+				],
+				"name": "addLocalContractAllowList",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLocalContractAllowList",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "transferer",
+						"type": "address"
+					}
+				],
+				"name": "removeLocalContractAllowList",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "calAddress",
+						"type": "address"
+					}
+				],
+				"name": "setCAL",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "level",
+						"type": "uint256"
+					}
+				],
+				"name": "setCALLevel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Lavulite",
+			"details": "Approve抑制機能付きコントラクトのインターフェース",
+			"events": {
+				"CalLevelChanged(address,uint256)": {
+					"details": "CALレベルが変更された場合のイベント"
+				},
+				"LocalCalAdded(address,address)": {
+					"details": "LocalContractAllowListnに追加された場合のイベント"
+				},
+				"LocalCalRemoved(address,address)": {
+					"details": "LocalContractAllowListnに削除された場合のイベント"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"addLocalContractAllowList(address)": {
+					"details": "CALのリストに無い独自の許可アドレスを追加する場合、こちらにアドレスを記載する。"
+				},
+				"getLocalContractAllowList()": {
+					"details": "CALのリストにある独自の許可アドレスの一覧を取得する。"
+				},
+				"removeLocalContractAllowList(address)": {
+					"details": "CALのリストにある独自の許可アドレスを削除する場合、こちらにアドレスを記載する。"
+				},
+				"setCAL(address)": {
+					"details": "CALのアドレスをセットする。"
+				},
+				"setCALLevel(uint256)": {
+					"details": "CALを利用する場合のCALのレベルを設定する。レベルが高いほど、許可されるコントラクトの範囲が狭い。"
+				}
+			},
+			"title": "IERC721RestrictApprove",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MusubiCollection_flattened.sol": "IERC721RestrictApprove"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MusubiCollection_flattened.sol": {
+			"keccak256": "0x83942480ef3c8fa37282f440062c80427c7aba11793a274180ec26f148d9bc75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6123a0048e823d6364f00132c0f499f4679352126e0642480a2cd9dde990482c",
+				"dweb:/ipfs/QmbX9QUDvJKhq6LHJ6r52FXXVXTpM6qZufzEXHsnwoSGgF"
+			]
+		}
+	},
+	"version": 1
+}

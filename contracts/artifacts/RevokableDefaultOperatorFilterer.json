@@ -1,0 +1,165 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"isOperatorFilterRegistryRevoked()": "ecba222a",
+			"operatorFilterRegistry()": "b0ccc31e",
+			"owner()": "8da5cb5b",
+			"revokeOperatorFilterRegistry()": "5ef9432a",
+			"updateOperatorFilterRegistryAddress(address)": "b8d1e532"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "InitialRegistryAddressCannotBeZeroAddress",
+			"type": "error"
+		},
+		{
+			"inputs": [],
+			"name": "OnlyOwner",
+			"type": "error"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "operator",
+					"type": "address"
+				}
+			],
+			"name": "OperatorNotAllowed",
+			"type": "error"
+		},
+		{
+			"inputs": [],
+			"name": "RegistryHasBeenRevoked",
+			"type": "error"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "newRegistry",
+					"type": "address"
+				}
+			],
+			"name": "OperatorFilterRegistryAddressUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [],
+			"name": "OperatorFilterRegistryRevoked",
+			"type": "event"
+		},
+		{
+			"inputs": [],
+			"name": "isOperatorFilterRegistryRevoked",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "operatorFilterRegistry",
+			"outputs": [
+				{
+					"internalType": "contract IOperatorFilterRegistry",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "owner",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "revokeOperatorFilterRegistry",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "newRegistry",
+					"type": "address"
+				}
+			],
+			"name": "updateOperatorFilterRegistryAddress",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

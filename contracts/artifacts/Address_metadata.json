@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Collection of functions related to the address type",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MusubiCollection_flattened.sol": "Address"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MusubiCollection_flattened.sol": {
+			"keccak256": "0x83942480ef3c8fa37282f440062c80427c7aba11793a274180ec26f148d9bc75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6123a0048e823d6364f00132c0f499f4679352126e0642480a2cd9dde990482c",
+				"dweb:/ipfs/QmbX9QUDvJKhq6LHJ6r52FXXVXTpM6qZufzEXHsnwoSGgF"
+			]
+		}
+	},
+	"version": 1
+}
